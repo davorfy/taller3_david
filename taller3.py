@@ -185,3 +185,25 @@ def actividad9():
         elif vend > 160000000:
             print(f'Total vendido: {vend}')
             print(f'Comisión: {vend * 0.3}')
+
+#Actividad 10
+def actividad10():
+    vot1 = vot2 = vot3 = 0
+    for i in range(5):
+        voto = int(input('Ingrese el numero del candidato (1, 2, 3): '))
+
+        if voto == 1:
+            vot1 += 1
+        if voto == 2:
+            vot2 += 1
+        if voto == 3:
+            vot3 += 1
+        
+    if vot1 > vot2 and vot1 > vot3:
+        return f'Candidato 1 ganó... # de votos: {vot1}'
+    elif vot3 > vot1 and vot3 > vot2:
+        return f'Candidato 3 ganó... # de votos: {vot3}'
+    elif vot2 > vot1 and vot2 > vot3:
+        return f'Candidato 2 ganó... # de votos: {vot2}'
+    elif vot1 == vot2 or vot1 == vot3 or vot2 == vot3:
+        return f'**EMPATE**...con un total de votos de: 50000'
