@@ -31,3 +31,51 @@ def actividad1(aut):
         "Num de autos verdes": verde,
         "Num de autos azules": azul
     }
+
+#Actividad 2
+def actividad2(anim):
+    edad_anim = []
+    if anim.lower() == 'elefante':
+        for i in range(20):
+            elefante = int(input('Ingrese edad del elefante:'))
+            edad_anim.append(elefante)
+    if anim.lower() == 'jirafa':
+        for i in range(15):
+            jirafa = int(input('Ingrese edad de la jirafa:'))
+            edad_anim.append(jirafa)
+    if anim.lower() == 'chimpance':
+        for i in range(40):
+            chimpance = int(input('Ingrese edad del chimpance:'))
+            edad_anim.append(chimpance)
+    
+    cat1 = cat2 = cat3 = 0
+    for edad in edad_anim:
+        if edad >= 0 and edad <= 1:
+            cat1 += 1
+        elif edad > 1 and edad < 3:
+            cat2 += 1
+        elif edad >= 3:
+            cat3 += 1
+    
+    if anim.lower() == 'elefante':
+        cat1 = (cat1 * 100) / 20 
+        cat2 = (cat2 * 100) / 20
+        cat3 = (cat3 * 100) / 20
+        
+    if anim.lower() == 'jirafa':
+        cat1 = (cat1 * 100) / 15 
+        cat2 = (cat2 * 100) / 15
+        cat3 = (cat3 * 100) / 15
+        
+    if anim.lower() == 'chimpance':
+        cat1 = (cat1 * 100) / 40
+        cat2 = (cat2 * 100) / 40
+        cat3 = (cat3 * 100) / 40
+
+
+    return {
+        "Animal": anim,
+        "De 0 a 1 año": cat1,
+        "Mas de 1 y menos de 3 años": cat2,
+        "De 3 o más años": cat3
+    }
