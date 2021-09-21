@@ -88,3 +88,18 @@ def actividad3(hor_x_obr):
         elif obr > 40:
             print(f'Pago: {40 * 20 + ((obr - 40) * 25)} ')
 
+#Actividad 4
+def actividad4(edad_hombre, edad_mujer):
+    acum_hombre = acum_mujer = tot = 0
+    for edad in edad_hombre:
+        acum_hombre += edad
+        tot += edad
+    for edad in edad_mujer:
+        acum_mujer += edad
+        tot += edad
+    
+    return {
+        "Promedio de hombres": acum_hombre / len(edad_hombre),
+        "Promedio de mujeres": acum_mujer / len(edad_mujer),
+        "Promedio gral": tot / (len(edad_hombre) + len(edad_mujer))
+    }
