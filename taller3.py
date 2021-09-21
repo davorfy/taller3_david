@@ -111,3 +111,18 @@ def actividad5(num):
         if n < menor:
             menor = n
     return menor
+
+#Actividad 6
+def actividad6():
+    for i in range(5):
+        ult_peso = int(input('Ingrese su peso último:'))
+        prom_peso = 0
+        for i in range(10):
+            prom_peso += int(input(f'Ingrese peso de báscula {i}:'))
+
+        prom_peso = prom_peso / 10
+
+        if prom_peso > ult_peso:
+            print(f'***subió*** {prom_peso - ult_peso}')
+        else:
+            print(f'***bajó*** {ult_peso - prom_peso}')
