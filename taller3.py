@@ -103,3 +103,11 @@ def actividad4(edad_hombre, edad_mujer):
         "Promedio de mujeres": acum_mujer / len(edad_mujer),
         "Promedio gral": tot / (len(edad_hombre) + len(edad_mujer))
     }
+
+#Actividad 5
+def actividad5(num):
+    menor = num[len(num) - 1]
+    for n in num:
+        if n < menor:
+            menor = n
+    return menor
