@@ -79,3 +79,12 @@ def actividad2(anim):
         "Mas de 1 y menos de 3 años": cat2,
         "De 3 o más años": cat3
     }
+
+#Actividad 3
+def actividad3(hor_x_obr):
+    for obr in hor_x_obr:
+        if obr <= 40:
+            print(f'Pago: {obr * 20}')
+        elif obr > 40:
+            print(f'Pago: {40 * 20 + ((obr - 40) * 25)} ')
+
