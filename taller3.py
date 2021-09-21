@@ -126,3 +126,15 @@ def actividad6():
             print(f'***subió*** {prom_peso - ult_peso}')
         else:
             print(f'***bajó*** {ult_peso - prom_peso}')
+
+#Actividad 7
+def actividad7(num_prod):
+
+    tot = 0
+    for _ in range(num_prod):
+        prec = int(input('Ingrese precio de producto: '))
+        cant = int(input('Cantidad producto: '))
+
+        tot += prec * cant
+    return tot
+
