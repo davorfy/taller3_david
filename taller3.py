@@ -138,3 +138,29 @@ def actividad7(num_prod):
         tot += prec * cant
     return tot
 
+#Actividad 8
+def actividad8(num_ent, valor):
+    rango_edad1 = rango_edad2 = rango_edad3 = rango_edad4 = rango_edad5 = 0
+    for i in range(num_ent):
+
+        edad = int(input('Ingrese edad: '))
+        if edad < 5:
+            print('No puede entrar')
+        if edad >= 5 and edad <= 14:
+            rango_edad1 += valor * 0.35
+        if edad >= 15 and edad <= 19:
+            rango_edad2 += valor * 0.25
+        if edad >= 20 and edad <= 45:
+            rango_edad3 += valor * 0.1 
+        if edad >= 46 and edad <= 65:
+            rango_edad4 += valor * 0.25
+        if edad > 65:
+            rango_edad5 += valor * 0.35
+
+    return {
+        "Rango 1": rango_edad1,
+        "Rango 2": rango_edad2,
+        "Rango 3": rango_edad3,
+        "Rango 4": rango_edad4,
+        "Rango 5": rango_edad5,
+        }
