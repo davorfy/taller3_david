@@ -164,3 +164,24 @@ def actividad8(num_ent, valor):
         "Rango 4": rango_edad4,
         "Rango 5": rango_edad5,
         }
+
+#Actividad 9
+def actividad9():
+    for i in range(1):
+        vend = int(input(f'{i} Valor vendido: '))
+
+        if vend <= 20000000:
+            print(f'Total vendido: {vend}')
+            print(f'Comisión: {vend * 0.1}')
+        elif vend > 20000000 and vend < 40000000:
+            print(f'Total vendido: {vend}')
+            print(f'Comisión: {vend * 0.15}')
+        elif vend >= 40000000 and vend < 80000000:
+            print(f'Total vendido: {vend}')
+            print(f'Comisión: {vend * 0.2}')
+        elif vend >= 80000000 and vend < 160000000:
+            print(f'Total vendido: {vend}')
+            print(f'Comisión: {vend * 0.25}')
+        elif vend > 160000000:
+            print(f'Total vendido: {vend}')
+            print(f'Comisión: {vend * 0.3}')
